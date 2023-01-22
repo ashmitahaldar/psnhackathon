@@ -48,8 +48,6 @@ if (calls <= maxCalls) {
 
     if (distance >= 200 || distance <= 0){ 
       Serial.println("Out of range");
-      // Run the Choreo; when results are available, print them to Console
-      SendSMSChoreo.run();
     }
     else {
       Serial.print(distance);
@@ -57,6 +55,8 @@ if (calls <= maxCalls) {
     }
     if (distance <= 10){ 
       tone(9,400,100);
+      // Run the Choreo; when results are available, print them to Console
+      SendSMSChoreo.run();
     }
     else {
       noTone(9);
